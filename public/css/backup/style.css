@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-naranja: #f58426; 
+    --color-amarillo: #ffd200;
+    --width-content: 1200px;
+    --font-family: "Montserrat", sans-serif;
+    --font-size-extra-small: 1rem; 
+    --font-size-small: 1.3rem; 
+    --font-size-medium: 1.8rem; 
+    --font-size-large: 2rem;
+}
+.width-content {
+    max-width: var(--width-content);
+    margin: 0 auto;
+}
+
+strong {
+  color: var(--color-amarillo);
+}
+
+.link-fuerte {
+  font-size: var(--font-size-medium);
+  color: var(--color-naranja);
+  font-weight: bolder;
+}
+
+/* ==============================HEADER========================= */
+
+
+/* Estilo general para el header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 30px;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0; /* Posición sticky desde la parte superior */
+  background-color: #ffffff; /* Fondo blanco para el header */
+  z-index: 1000; /* Z-index alto para asegurar que esté por encima de otros elementos */
+}
+/* Estilo para el logo */
+.header img {
+  height: 130px; /* Ajusta la altura del logo según sea necesario */
+}
+
+/* Eliminar viñetas y márgenes por defecto */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Alinear los elementos en una fila */
+  gap: 20px;
+}
+
+
+/* Estilo para los enlaces */
+nav a {
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
+  color: #000; /* Color del texto */
+  font-weight: bold;
+  font-size: var(--font-size-small);
+  text-align: center;
+}
+
+/* Estilo al pasar el ratón sobre los enlaces */
+nav a:hover {
+  text-decoration: underline !important; /* Subrayado al pasar el ratón */
+  color: var(--color-naranja) !important; /* Cambiar color al pasar el ratón */
+}
+
+nav li {
+  border-right: 1px solid #ccc; /* Línea divisoria entre elementos */
+  padding-right: 5px; /* Espacio adicional entre el borde y el texto */
+}
+
+nav li:last-child {
+  border-right: none; /* No añadir borde derecho al último elemento */
+}
+
+
+    /* Estilos personalizados para mejorar la responsividad */
+    .header img {
+      max-width: 300px;
+      height: auto;
+    }
+    .header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .header nav ul li {
+      margin: 5px 10px;
+    }
+    .header nav ul li a {
+      text-decoration: none;
+      color: #000;
+    }
+    @media (max-width: 768px) {
+      .header nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .header nav ul li {
+        margin: 5px 0;
+      }
+    }
+
+/* =========================MAIN (PAISES-CARDS Nuestros proyectos)================== */
+/* =========================MAIN (INDEX)================== */
+
+h2, blockquote{
+  text-align: center;
+  color: var(--color-naranja);
+}
+
+.container-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+video{
+  width: 60vw;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px var(--color-naranja);
+}
+
+.quienes-somos{
+  margin:2rem auto;
+}
+
+.carousel-indicators button {
+  background-color: var(--color-naranja)!important;
+}
+
+.carousel-half-height img {
+height: 50vh;
+object-fit: cover;
+}
+
+.carousel-caption a {
+  color: white;
+  text-decoration: none; 
+}
+
+.carousel-caption a:hover {
+  color:var(--color-amarillo);
+}
+/* =========================MAIN (Nuestros proyectos video youtube resposive)================== */
+
+.video-container {
+  position: relative;
+  padding-bottom: 45%; /* Ajusta la proporción de aspecto según lo necesites */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 10%; /* Ajusta la posición superior */
+  left: 10%; /* Ajusta la posición izquierda */
+  width: 80%; /* Reducción del 20% en el ancho */
+  height: 80%; /* Reducción del 20% en la altura */
+}
+
+
+/* =========================MAIN (CARDS mapamundi)================== */
+/* Estilo para la imagen del mapa */
+.img-mapa {
+  width: 80%; /* La imagen del mapa ocupará el 80% del ancho del contenedor */
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  height: auto; /* Para mantener la proporción */
+  display: block; /* Para quitar cualquier espacio adicional */
+  margin: 0 auto 20px; /* Centrar la imagen horizontalmente y añadir margen inferior */
+}
+
+
+
+/* Estilo para las tarjetas (si hay más contenido) */
+.card {
+  margin-bottom: 20px; /* Añade un margen inferior a las tarjetas */
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+  .img-mapa {
+    max-width: 80%; /* Reducir el tamaño máximo de la imagen en pantallas más pequeñas */
+    width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-mapa {
+    max-width: 80%; /* Ajustar aún más el tamaño máximo en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .img-mapa {
+    max-width: 70%; /* Reducir el tamaño máximo en pantallas móviles más pequeñas */
+  }
+}
+
+/* =========================MAIN (PAISES-CARDS)================== */
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card2 {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 500px; /* Ancho fijo inicial */
+  transition: box-shadow 0.3s ease;
+  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card2 {
+    width: 80%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+}
+
+/* Media query para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .card2 {
+    width: 90%; /* Reducir aún más el ancho en pantallas muy pequeñas */
+  }
+}
+
+.card2 img {
+  width: 250px; /* Ancho fijo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  display: block; /* Asegura que la imagen sea un bloque para centrarla */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro de su contenedor */
+  border-radius: 5px; /* Añade bordes redondeados */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card2 img {
+    width: 200px; /* Reducir el ancho de la imagen en pantallas más pequeñas */
+  }
+}
+
+/* Media query para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .card2 img {
+    width: 150px; /* Reducir aún más el ancho de la imagen en pantallas muy pequeñas */
+  }
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: var(--font-size-extra-small);
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px var(--color-naranja); /* Naranja */
+}
+
+.card .btn:hover {
+  background-color: var(--color-naranja); /* Naranja */
+  color: #fff; /* Asegura que el texto siga siendo legible */
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px var(--color-naranja); /* Naranja */
+}
+
+.card2 .btn:hover {
+  background-color: var(--color-naranja); /* Naranja */
+  color: #fff; /* Asegura que el texto siga siendo legible */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .card {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .header img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 0; /* Remove bottom margin to align in row */
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Add space between image and nav */
+  }
+  .header .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header .col-12 {
+    display: flex;
+    justify-content: center;
+  }
+  .header .col-md-4, .header .col-md-8 {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Allow flex items to grow */
+  }
+  .header nav ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .header nav ul li {
+    margin: 0 10px; /* Add some spacing between nav items */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-content h3 {
+    width: 70%;
+    font-size: 1.25rem;
+  }
+
+  .card-content p {
+    font-size: var(--font-size-extra-small);
+  }
+
+  .header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Allow flex items to grow */
+  }
+
+  .header .col-md-4, .header .col-md-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .header nav ul li {
+    margin: 0 10px; /* Add some spacing between nav items */
+  }
+
+  .header img {
+    max-width: 150px; /* Adjust size for small screens */
+    height: auto;
+  }
+}
+/* ==============================Main TEXTO PAISES ================== */
+
+.title-primary {
+  color: var(--color-naranja);
+  font-size: 2.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.title-secondary {
+  color: var(--color-naranja);
+  font-size: 2rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.title-tertiary {
+  color: var(--color-naranja);
+  font-size: 1.75rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.paragraph {
+  margin-bottom: 1em;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.list {
+  list-style-type: disc;
+  margin: 1em 0 1em 1.5em;
+  padding: 0;
+}
+
+.list-item {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .width-content {
+    padding: 10px;
+  }
+
+  .title-primary {
+    font-size: 2rem;
+  }
+
+  .title-secondary {
+    font-size: 1.75rem;
+  }
+
+  .title-tertiary {
+    font-size: 1.5rem;
+  }
+
+  .paragraph, .list-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .width-content {
+    padding: 5px;
+  }
+
+  .title-primary {
+    font-size: 1.75rem;
+  }
+
+  .title-secondary {
+    font-size: 1.5rem;
+  }
+
+  .title-tertiary {
+    font-size: 1.25rem;
+  }
+
+  .paragraph, .list-item {
+    font-size: 0.9rem;
+  }
+
+  .list {
+    margin: 1em 0 1em 1em;
+  }
+}
+/* ==============================REDES TEXTO ================== */
+.organizations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Añade espacio entre las columnas */
+  max-width: 1200px; /* Limita el ancho máximo para mejor apariencia */
+  margin: 0 auto; /* Centra el contenedor */
+  text-align: center;
+  align-items: center;
+}
+
+.organizations .paragraph {
+  flex: 1 1 calc(50% - 10px); /* Dos columnas, con espacio entre ellas */
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ddd; /* Añade un borde alrededor de cada elemento */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo ligero para resaltar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra para profundidad */
+}
+
+@media (max-width: 768px) {
+  .organizations .paragraph {
+    flex: 1 1 100%; /* En pantallas más pequeñas, usa una sola columna */
+  }
+}
+
+/* ======================FOOTER==================== */
+
+.footer {
+  background-color: var(--color-naranja);
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+  font-size: var(--font-size-small);
+  color: black;
+  
+
+  div {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+  }
+  ul {
+      list-style: none;
+  }
+  .redes-sociales {
+      display: flex;
+      justify-content: space-around;
+      width: 15%;
+      padding: 0;
+      img {
+          height: 25px;
+          filter: drop-shadow(1px 1px 5px rgb(99, 97, 97))
+      }
+  }
+  a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: var(--font-size-small);
+      color: black;
+  }
+  a:hover {
+      /* font-weight: bold; */
+      scale: 1.1;
+      color: black;
+      
+  }
+
+
+}
